@@ -2,10 +2,30 @@
 @import "_variables";
 
 body {
-  background: black;
-  color: #fff;
+  background: $background;
+  color: $text;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
+}
+
+.main {
+}
+
+.section {
+  min-height: 100%;
+  &__container {
+    &--registers {
+      display: grid;
+      grid-template-columns: 50px 200px 200px;
+      grid-template-rows: 100px 1fr;
+      grid-template-areas:
+        name button1 button2
+        name value value;
+    }
+  }
+  &__paragraph {
+    background-color: $background-secondary;
+  }
 }
