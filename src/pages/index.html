@@ -24,56 +24,169 @@
 
     <main class="main">
       <section class="section section--registers">
-        <div class="section__buttons">
-          <button class="section__button section__button--reset">Reset</button>
-          <button class="section__button section__button--random">
-            Random
+        <button class="section__button section__button--reset">Reset</button>
+        <button class="section__button section__button--random">Random</button>
+        <div class="section__container section__container--registers">
+          <p class="section__paragraph">AX</p>
+          <p class="section__paragraph">BX</p>
+          <p class="section__paragraph">CX</p>
+          <p class="section__paragraph">DX</p>
+        </div>
+        <div class="section__container section__container--values">
+          <p class="section__paragraph">0</p>
+          <p class="section__paragraph">0</p>
+          <p class="section__paragraph">0</p>
+          <p class="section__paragraph">0</p>
+        </div>
+      </section>
+      <section class="section section--orders">
+        <div class="section__container section__container--AX">
+          <button class="section__button section__button--mov">
+            MOV AX BX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV AX CX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV AX DX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG AX BX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG AX CX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG AX DX
           </button>
         </div>
-        <div class="section__container section__container--registers">
-          <div class="section__row">
-            <p class="section__paragraph section__paragraph--AX">AX</p>
-            <p class="section__paragraph section__paragraph--AXvalue"></p>
-          </div>
-          <div class="section__row">
-            <p class="section__paragraph section__paragraph--BX">BX</p>
-            <p class="section__paragraph section__paragraph--BXvalue"></p>
-          </div>
-          <div class="section__row">
-            <p class="section__paragraph section__paragraph--CX">CX</p>
-            <p class="section__paragraph section__paragraph--CXvalue"></p>
-          </div>
-          <div class="section__row">
-            <p class="section__paragraph section__paragraph--DX">DX</p>
-            <p class="section__paragraph section__paragraph--DXvalue"></p>
-          </div>
-        </div>
-      </section>
-      <section class="section section--mov">
-        <div class="section__container section__container--AX">
-          <button class="section__button">MOV AX,BX</button>
-          <button class="section__button">MOV AX,CX</button>
-          <button class="section__button">MOV AX,DX</button>
-        </div>
         <div class="section__container section__container--BX">
-          <button class="section__button">MOV BX,AX</button>
-          <button class="section__button">MOV BX,CX</button>
-          <button class="section__button">MOV BX,DX</button>
+          <button class="section__button section__button--mov">
+            MOV BX AX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV BX CX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV BX DX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG BX AX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG BX CX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG BX DX
+          </button>
         </div>
         <div class="section__container section__container--CX">
-          <button class="section__button">MOV CX,AX</button>
-          <button class="section__button">MOV CX,BX</button>
-          <button class="section__button">MOV CX,DX</button>
+          <button class="section__button section__button--mov">
+            MOV CX AX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV CX BX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV CX DX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG CX AX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG CX BX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG CX DX
+          </button>
         </div>
         <div class="section__container section__container--DX">
-          <button class="section__button">MOV DX,AX</button>
-          <button class="section__button">MOV DX,BX</button>
-          <button class="section__button">MOV DX,CX</button>
+          <button class="section__button section__button--mov">
+            MOV DX AX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV DX BX
+          </button>
+          <button class="section__button section__button--mov">
+            MOV DX CX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG DX AX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG DX BX
+          </button>
+          <button class="section__button section__button--xchg">
+            XCHG DX CX
+          </button>
         </div>
       </section>
-      <section class="section section--radio"></section>
-      <section class="section section--memory"></section>
-      <section class="section section--push"></section>
+      <section class="section">
+        <div>
+          <button></button>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </section>
+      <section class="section">
+        <button></button>
+        <div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </section>
+      <section class="section">
+        <p></p>
+        <p></p>
+        <button></button>
+        <button></button>
+      </section>
+      <section class="section">
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
