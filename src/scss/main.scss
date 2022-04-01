@@ -9,3 +9,59 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
+.main {
+  max-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-template-areas:
+    "registers orders orders"
+    "radios radios radios"
+    "registers-advanced DISP stack";
+  grid-template-columns: 30% 15% 1fr;
+  grid-template-rows: 1fr 15% 1fr;
+}
+
+.section {
+  border: 2px solid #ffffff;
+  &__button {
+    &--reset {
+      grid-area: reset;
+    }
+    &--random {
+      grid-area: random;
+    }
+  }
+  &__container {
+    &--registers {
+      grid-area: registers;
+    }
+    &--values {
+      grid-area: values;
+    }
+  }
+  &--registers {
+    grid-area: registers;
+    display: grid;
+    grid-template-areas:
+      ". reset random"
+      "registers values values";
+    grid-template-columns: 20% 1fr 1fr;
+    grid-template-rows: 20% 1fr;
+  }
+  &--orders {
+    grid-area: orders;
+  }
+  &--radios {
+    grid-area: radios;
+  }
+  &--registers-advanced {
+    grid-area: registers-advanced;
+  }
+  &--DISP {
+    grid-area: DISP;
+  }
+  &--stack {
+    grid-area: stack;
+  }
+}
