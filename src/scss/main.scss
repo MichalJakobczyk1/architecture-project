@@ -31,13 +31,42 @@ body {
     &--random {
       grid-area: random;
     }
+    &--reset-advanced {
+      grid-area: reset-advanced;
+    }
   }
   &__container {
+    border: 2px solid red;
     &--registers {
       grid-area: registers;
     }
     &--values {
       grid-area: values;
+    }
+    &--orders {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 24%;
+    }
+    &--radios {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 16%;
+    }
+    &--names {
+      grid-area: names;
+    }
+    &--records {
+      grid-area: records;
+    }
+    &--pushpop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
   &--registers {
@@ -51,17 +80,34 @@ body {
   }
   &--orders {
     grid-area: orders;
+    display: flex;
+    justify-content: center;
   }
   &--radios {
     grid-area: radios;
+    display: flex;
+    justify-content: center;
   }
   &--registers-advanced {
     grid-area: registers-advanced;
+    display: grid;
+    grid-template-areas:
+      ". reset-advanced"
+      "names records";
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 20% 1fr;
   }
   &--DISP {
     grid-area: DISP;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   &--stack {
     grid-area: stack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
