@@ -1,7 +1,9 @@
 @import "~normalize.css";
 @import "_variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
+  font-family: "Roboto", sans-serif;
   background: $background;
   color: $text;
   display: flex;
@@ -18,30 +20,65 @@ body {
     "registers orders orders"
     "radios radios radios"
     "registers-advanced DISP stack";
-  grid-template-columns: 30% 15% 1fr;
-  grid-template-rows: 1fr 15% 1fr;
+  grid-template-columns: 30% 25% 1fr;
+  grid-template-rows: 1fr 25% 30%;
 }
 
 .section {
-  border: 2px solid #ffffff;
+  //border: 2px solid #ffffff;
   &__button {
+    color: $text;
+    background: $background;
+    border: 2px $button solid;
+    border-radius: 16px;
+    text-align: center;
+    margin: 8px;
+    cursor: pointer;
+    &--registers {
+      width: 100px;
+      font-size: 20px;
+      margin: auto;
+    }
     &--reset {
       grid-area: reset;
+      padding: 12px;
     }
     &--random {
       grid-area: random;
+      padding: 12px;
+    }
+    &--mov {
+      padding: 16px;
+    }
+    &--xchg {
+      padding: 16px;
+      border: 2px $button-alter solid;
+    }
+    &--radio {
+      max-width: 150px;
+      padding: 6px;
     }
     &--reset-advanced {
       grid-area: reset-advanced;
     }
   }
   &__container {
-    border: 2px solid red;
+    //border: 2px solid red;
     &--registers {
       grid-area: registers;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     &--values {
       grid-area: values;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     &--orders {
       display: flex;
@@ -65,7 +102,7 @@ body {
     &--pushpop {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
     }
   }
@@ -87,6 +124,7 @@ body {
     grid-area: radios;
     display: flex;
     justify-content: center;
+    margin: 32px 0;
   }
   &--registers-advanced {
     grid-area: registers-advanced;
@@ -102,7 +140,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   &--stack {
     grid-area: stack;
