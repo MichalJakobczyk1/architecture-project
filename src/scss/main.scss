@@ -21,11 +21,14 @@ body {
     "radios radios radios"
     "registers-advanced DISP stack";
   grid-template-columns: 30% 25% 1fr;
-  grid-template-rows: 1fr 25% 30%;
+  grid-template-rows: 1fr 30% 30%;
 }
 
 .section {
   //border: 2px solid #ffffff;
+  &__paragraph {
+    font-size: 20px;
+  }
   &__button {
     color: $text;
     background: $background;
@@ -34,6 +37,10 @@ body {
     text-align: center;
     margin: 8px;
     cursor: pointer;
+    transition: border 0.5s ease-in-out;
+    &:hover {
+      border: 2px solid $active;
+    }
     &--registers {
       width: 100px;
       font-size: 20px;
@@ -41,10 +48,12 @@ body {
     }
     &--reset {
       grid-area: reset;
+      margin-top: 32px;
       padding: 12px;
     }
     &--random {
       grid-area: random;
+      margin-top: 32px;
       padding: 12px;
     }
     &--mov {
@@ -53,6 +62,9 @@ body {
     &--xchg {
       padding: 16px;
       border: 2px $button-alter solid;
+      &:hover {
+        border: 2px solid $active-alter;
+      }
     }
     &--radio {
       max-width: 150px;
@@ -60,13 +72,28 @@ body {
     }
     &--reset-advanced {
       grid-area: reset-advanced;
+      padding: 12px;
+      margin: auto;
+      width: 100px;
+      font-size: 20px;
+    }
+    &--push {
+      padding: 16px;
+      margin: 8px 48px;
+    }
+    &--pop {
+      padding: 16px;
+      margin: 8px 48px;
+      border: 2px $button-alter solid;
+      &:hover {
+        border: 2px solid $active-alter;
+      }
     }
   }
   &__container {
     //border: 2px solid red;
     &--registers {
       grid-area: registers;
-      font-size: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -74,7 +101,6 @@ body {
     }
     &--values {
       grid-area: values;
-      font-size: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -91,13 +117,22 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-width: 16%;
+      min-width: 15%;
     }
     &--names {
       grid-area: names;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
     }
     &--records {
       grid-area: records;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     &--pushpop {
       display: flex;
@@ -124,7 +159,9 @@ body {
     grid-area: radios;
     display: flex;
     justify-content: center;
-    margin: 32px 0;
+    margin: 32px 32px;
+    border: 3px solid $button-alter;
+    border-radius: 25px;
   }
   &--registers-advanced {
     grid-area: registers-advanced;
@@ -148,4 +185,8 @@ body {
     justify-content: center;
     align-items: center;
   }
+}
+
+.footer {
+  margin: 32px 0 0 0;
 }
