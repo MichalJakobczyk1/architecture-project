@@ -20,27 +20,28 @@ const xchgAXDX = document.querySelector(".section__button--xchgAXDX");
 const movBXAX = document.querySelector(".section__button--movBXAX");
 const movBXCX = document.querySelector(".section__button--movBXCX");
 const movBXDX = document.querySelector(".section__button--movBXDX");
-const xchgBXAX = document.querySelector(".section__button--xchgBXAX")
-const xchgBXCX = document.querySelector(".section__button--xchgBXCX")
-const xchgBXDX = document.querySelector(".section__button--xchgBXDX")
+const xchgBXAX = document.querySelector(".section__button--xchgBXAX");
+const xchgBXCX = document.querySelector(".section__button--xchgBXCX");
+const xchgBXDX = document.querySelector(".section__button--xchgBXDX");
 
 //CX
 const movCXAX = document.querySelector(".section__button--movCXAX");
 const movCXBX = document.querySelector(".section__button--movCXBX");
 const movCXDX = document.querySelector(".section__button--movCXDX");
-const xchgCXAX = document.querySelector(".section__button--xchgCXAX")
-const xchgCXBX = document.querySelector(".section__button--xchgCXBX")
-const xchgCXDX = document.querySelector(".section__button--xchgCXDX")
+const xchgCXAX = document.querySelector(".section__button--xchgCXAX");
+const xchgCXBX = document.querySelector(".section__button--xchgCXBX");
+const xchgCXDX = document.querySelector(".section__button--xchgCXDX");
 
 //DX
 const movDXAX = document.querySelector(".section__button--movDXAX");
 const movDXBX = document.querySelector(".section__button--movDXBX");
 const movDXCX = document.querySelector(".section__button--movDXCX");
-const xchgDXAX = document.querySelector(".section__button--xchgDXAX")
-const xchgDXBX = document.querySelector(".section__button--xchgDXBX")
-const xchgDXCX = document.querySelector(".section__button--xchgDXCX")
+const xchgDXAX = document.querySelector(".section__button--xchgDXAX");
+const xchgDXBX = document.querySelector(".section__button--xchgDXBX");
+const xchgDXCX = document.querySelector(".section__button--xchgDXCX");
 
 //rejestry random/reset
+let randomValueAX = 0;
 const registersRandom = document.querySelector(
   ".section__button--random-register"
 );
@@ -48,7 +49,7 @@ const registersReset = document.querySelector(
   ".section__button--reset-register"
 );
 registersRandom.addEventListener("click", () => {
-  const randomValueAX = Math.floor(Math.random() * 16777215)
+  randomValueAX = Math.floor(Math.random() * 16777215)
     .toString(16)
     .substring(0, 4);
   const randomValueBX = Math.floor(Math.random() * 16777215)
@@ -94,58 +95,58 @@ xchgAXDX.addEventListener("click", () => {
 });
 //BX
 movBXAX.addEventListener("click", () => {
-  mov(BX,AX)
-})
+  mov(BX, AX);
+});
 movBXCX.addEventListener("click", () => {
-  mov(BX,CX)
-})
+  mov(BX, CX);
+});
 movBXDX.addEventListener("click", () => {
-  mov(BX,DX)
-})
-xchgBXAX.addEventListener("click",() => {
-  xchg(BX,AX)
-})
-xchgBXCX.addEventListener("click",() => {
-  xchg(BX,CX)
-})
-xchgBXDX.addEventListener("click",() => {
-  xchg(BX,DX)
-})
+  mov(BX, DX);
+});
+xchgBXAX.addEventListener("click", () => {
+  xchg(BX, AX);
+});
+xchgBXCX.addEventListener("click", () => {
+  xchg(BX, CX);
+});
+xchgBXDX.addEventListener("click", () => {
+  xchg(BX, DX);
+});
 //CX
 movCXAX.addEventListener("click", () => {
-  mov(CX,AX)
-})
+  mov(CX, AX);
+});
 movCXBX.addEventListener("click", () => {
-  mov(CX,BX)
-})
+  mov(CX, BX);
+});
 movCXDX.addEventListener("click", () => {
-  mov(CX,DX)
-})
-xchgCXAX.addEventListener("click",() => {
-  xchg(CX,AX)
-})
-xchgCXBX.addEventListener("click",() => {
-  xchg(CX,BX)
-})
-xchgCXDX.addEventListener("click",() => {
-  xchg(CX,DX)
-})
+  mov(CX, DX);
+});
+xchgCXAX.addEventListener("click", () => {
+  xchg(CX, AX);
+});
+xchgCXBX.addEventListener("click", () => {
+  xchg(CX, BX);
+});
+xchgCXDX.addEventListener("click", () => {
+  xchg(CX, DX);
+});
 //DX
 movDXAX.addEventListener("click", () => {
-  mov(DX,AX)
-})
+  mov(DX, AX);
+});
 movDXBX.addEventListener("click", () => {
-  mov(DX,BX)
-})
+  mov(DX, BX);
+});
 movDXCX.addEventListener("click", () => {
-  mov(DX,CX)
-})
-xchgDXAX.addEventListener("click",() => {
-  xchg(DX,AX)
-})
-xchgDXBX.addEventListener("click",() => {
-  xchg(DX,BX)
-})
-xchgDXCX.addEventListener("click",() => {
-  xchg(DX,CX)
-})
+  mov(DX, CX);
+});
+xchgDXAX.addEventListener("click", () => {
+  xchg(DX, AX);
+});
+xchgDXBX.addEventListener("click", () => {
+  xchg(DX, BX);
+});
+xchgDXCX.addEventListener("click", () => {
+  xchg(DX, CX);
+});
